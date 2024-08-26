@@ -3,6 +3,7 @@ const express = require('express');
 const { ApolloServer } = require('@apollo/server');
 const { expressMiddleware } = require('@apollo/server/express4');
 const path = require('path');
+const cors = require('cors');
 
 const { authMiddleware } = require('./utils/auth');
 
@@ -24,6 +25,8 @@ const startApolloServer = async () => {
 
 	app.use(cors({
 		origin: 'https://book-search-engine-66y0.onrender.com',
+		//'http://localhost:3000', 
+		//'https://book-search-engine-66y0.onrender.com',
 		credentials: true,
 	  }));
 

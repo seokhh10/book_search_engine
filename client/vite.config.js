@@ -12,7 +12,8 @@ export default defineConfig({
     open: true,
     proxy: {
       '/graphql': {
-        target: 'book-search-engine-ex1w.onrender.com',
+        target: 'http://book-search-engine-ex1w.onrender.com',
+        //'book-search-engine-ex1w.onrender.com',
         // For local 'http://localhost:3000',
         secure: false,
         changeOrigin: true
