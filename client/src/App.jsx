@@ -7,7 +7,10 @@ import Navbar from './components/Navbar'
 import './App.css'
 
 const httpLink = createHttpLink({
-	uri: '/graphql'
+	// uri: 'https://book-search-engine-66y0.onrender.com'
+
+	 // For local  
+	 uri: 'http://localhost:3000/graphql'
 })
 
 const authLink = setContext((_, { headers }) => {
