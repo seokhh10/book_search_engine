@@ -12,7 +12,7 @@
    ## Installation 
    
    The project was uploaded to GitHub at the following repository: https://github.com/seokhh10/book_search_engine <br/>
-   Deployed application access with the Render: https://book-search-engine-66y0.onrender.com  <br/>  
+   Deployed application access with the Render: https://book-search-engine-ex1w.onrender.com  <br/>  
    To install the project follow these steps: 
    * Clone the application from GitHub with: git clone [clone link from GitHub] 
    * From the root folder, install the dependencies with: npm install
