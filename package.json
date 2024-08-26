@@ -7,24 +7,20 @@
     "start": "node server/server.js",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
-    "build": "cd client && npm run build",
+    "build:client": "cd client && npm i && npm run build",
+    "build:server": "cd server && npm i",
+    "build": "concurrently \"npm run build:client\" \"npm run build:server\"",
     "render-build": "npm install && npm run build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^5.1.0",
-    "vite": "^5.4.2"
+    "concurrently": "^5.1.0"
   },
   "dependencies": {
-    "@apollo/client": "^3.11.4",
-    "@apollo/react-hooks": "^4.0.0",
-    "@apollo/server": "^4.11.0",
     "apollo-server-express": "^3.13.0",
-    "dotenv": "^16.4.5",
-    "graphql": "^16.9.0",
-    "graphql-tag": "^2.12.6",
-    "react-router-dom": "^6.26.1"
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5"
   }
 }
