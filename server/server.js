@@ -22,6 +22,11 @@ const startApolloServer = async () => {
 	app.use(express.urlencoded({ extended: true }))
 	app.use(express.json())
 
+	app.use(cors({
+		origin: 'https://book-search-engine-66y0.onrender.com',
+		credentials: true,
+	  }));
+
 	app.use(
 		'/graphql',
 		expressMiddleware(server, {
@@ -45,7 +50,8 @@ const startApolloServer = async () => {
 	db.once('open', () => {
 		app.listen(PORT, () => {
 			console.log(`🌍 Now listening on localhost:${PORT}`)
-			console.log(`Use GraphQL at http://localhost:${PORT}/graphql`)
+			//For local console.log(`Use GraphQL at http://localhost:${PORT}/graphql`)
+			console.log(`Use GraphQL at https://book-search-engine-ex1w.onrender.com`);
 		})
 	})
 }
