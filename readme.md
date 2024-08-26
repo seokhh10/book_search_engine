@@ -6,7 +6,7 @@
    
    ## Table of Contents  
    * [Installation](#installation)
-   * [Contributors](#contibutors) 
+   * [Screenshot](#screenshot) 
    * [References](#references)
      
    ## Installation 
@@ -18,9 +18,9 @@
    * From the root folder, install the dependencies with: npm install
    * To run the app locally use: npm run develop
      
-   ## Contributors
+   ## Screenshot
 
-   N/A
+   ![Mockup-image](./client/src/assets/Screenshot.png)
 
    ## References
    
