@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import { gql } from '@apollo/client';
 
 // login user mutation set up using Apollo Server.
 export const LOGIN_USER = gql`
@@ -28,41 +28,38 @@ export const ADD_USER = gql`
 
 // save book mutation
 export const SAVE_BOOK = gql`
-    mutation saveBook($bookInput: BookInput!){
-        saveBook(bookInput :$bookInput)
-        {
-            _id
-            username
-            email
-            savedBooks {
-              bookId
-              authors
-              image
-              description
-              title
-              link
-            }
-        }
+  mutation saveBook($bookData: BookInput!) {
+    saveBook(bookData: $bookData) {
+      _id
+      username
+      savedBooks {
+        bookId
+        authors
+        description
+        title
+        image
+        link
+      }
     }
+  }
 `;
+
 
 // remove book mutation
 
 export const REMOVE_BOOK = gql`
-    mutation removeBook($bookId: ID!) {
-        removeBook(bookId:$bookId) {
-            _id
-            username
-            email
-            bookCount
-            savedBooks {
-                bookId
-                authors
-                image
-                link
-                title
-                description
-            }
-        }
-}
+  mutation removeBook($bookId: ID!) {
+    removeBook(bookId: $bookId) {
+      _id
+      username
+      savedBooks {
+        bookId
+        authors
+        description
+        title
+        image
+        link
+      }
+    }
+  }
 `;
